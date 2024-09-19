@@ -1,0 +1,41 @@
+{
+  "name": "hzs-utils",
+  "version": "1.0.1",
+  "description": "前端常用工具函数封装",
+  "author": "yellowTree",
+  "license": "MIT",
+  "main": "dist/hzs-utils.cjs.js",
+  "module": "dist/hzs-utils.esm.js",
+  "browser": "dist/hzs-utils.umd.js",
+  "types": "src/index.d.ts",
+  "type": "module",
+  "files": [
+    "src",
+    "dist/*.js"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-typescript": "^7.24.7",
+    "@jest/globals": "^29.7.0",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.5.3",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^29.7.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "rollup": "^4.21.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "ts-jest": "^29.2.5",
+    "tslib": "^2.7.0"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
