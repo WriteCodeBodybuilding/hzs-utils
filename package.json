@@ -1,10 +1,17 @@
 {
   "name": "hzs-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "前端常用工具函数封装",
   "author": "yellowTree",
   "license": "MIT",
   "main": "dist/hzs-utils.cjs.js",
+  "keywords": [
+    "utils",
+    "yellowTree"
+  ],
+  "bugs": {
+    "url": "1819549921@qq.com"
+  },
   "module": "dist/hzs-utils.esm.js",
   "browser": "dist/hzs-utils.umd.js",
   "types": "src/index.d.ts",
