@@ -31,6 +31,15 @@ declare namespace dipUtils {
      * @param {String} name 
      */
     export function desensitizeName(name: string): string
+
+    /**
+    * 节流函数
+    * @param func - 要节流的函数
+    * @param wait - 节流时间间隔，默认为 500 毫秒
+    * @param immediate - 是否立即执行，默认为 true
+    * @returns 节流后的函数
+    */
+    export function throttle<T extends (...args: any[]) => any>(func: T, wait: number = 500, immediate: boolean = true): T
 }
 
 declare module 'hzs-utils' {
