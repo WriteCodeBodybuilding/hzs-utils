@@ -173,6 +173,9 @@ function getQueryParams(data, isPrefix, arrayFormat) {
     }
     return _result.length ? prefix + _result.join('&') : '';
 }
+function isEmail(value) {
+    return /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/.test(value);
+}
 
 exports.debounce = debounce;
 exports.deepClone = deepClone;
@@ -181,5 +184,6 @@ exports.desensitizeIdCard = desensitizeIdCard;
 exports.desensitizeName = desensitizeName;
 exports.desensitizePhoneNumber = desensitizePhoneNumber;
 exports.getQueryParams = getQueryParams;
+exports.isEmail = isEmail;
 exports.random = random;
 exports.throttle = throttle;

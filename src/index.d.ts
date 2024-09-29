@@ -65,9 +65,9 @@ declare namespace dipUtils {
      * @param data 需要转换的对象
      * @param isPrefix 是否自动加上 "?"
      * @param arrayFormat 数组格式化规则  例如data: {
-				name: '冷月夜',
-				fruits: ['apple', 'banana', 'orange']
-			}
+                name: '冷月夜',
+                fruits: ['apple', 'banana', 'orange']
+            }
      * indices ?name=冷月夜&fruits[0]=apple&fruits[1]=banana&fruits[2]=orange
      * brackets ?name=冷月夜&fruits[]=apple&fruits[]=banana&fruits[]=orange     
      * repeat ?name=冷月夜&fruits=apple&fruits=banana&fruits=orange  
@@ -80,6 +80,25 @@ declare namespace dipUtils {
         isPrefix: boolean = true,
         arrayFormat: 'indices' | 'brackets' | 'repeat' | 'comma' = 'brackets'
     ): string
+    /**
+     * 验证电子邮箱格式
+     * @param value 待验证的字符串
+     * @returns 如果验证通过，返回true，否则返回false
+     */
+    export function isEmail(value: string): boolean
+    /**
+     * 验证手机格式
+     * @param value 待验证的字符串
+     * @returns 如果验证通过，返回true，否则返回false
+     */
+    export function isMobile(value: string): boolean
+    /**
+     * 验证身份证号码
+     * @param value 待验证的字符串
+     * @returns 如果验证通过，返回true，否则返回false
+     */
+    export function isIdCard(value: string): boolean
+
 }
 
 declare module 'hzs-utils' {

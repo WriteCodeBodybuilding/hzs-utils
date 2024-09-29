@@ -171,5 +171,8 @@ function getQueryParams(data, isPrefix, arrayFormat) {
     }
     return _result.length ? prefix + _result.join('&') : '';
 }
+function isEmail(value) {
+    return /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/.test(value);
+}
 
-export { debounce, deepClone, desensitizeEmail, desensitizeIdCard, desensitizeName, desensitizePhoneNumber, getQueryParams, random, throttle };
+export { debounce, deepClone, desensitizeEmail, desensitizeIdCard, desensitizeName, desensitizePhoneNumber, getQueryParams, isEmail, random, throttle };
