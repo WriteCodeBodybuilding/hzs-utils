@@ -174,5 +174,19 @@ function getQueryParams(data, isPrefix, arrayFormat) {
 function isEmail(value) {
     return /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/.test(value);
 }
+function isMobile(value) {
+    return /^1([3589]\d|4[5-9]|6[1-2,4-7]|7[0-8])\d{8}$/.test(value);
+}
+function isIdCard(value) {
+    return /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/.test(value);
+}
+function getBase64(file) {
+    return new Promise(function (resolve, reject) {
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function () { return resolve(reader.result); };
+        reader.onerror = function (error) { return reject(error); };
+    });
+}
 
-export { debounce, deepClone, desensitizeEmail, desensitizeIdCard, desensitizeName, desensitizePhoneNumber, getQueryParams, isEmail, random, throttle };
+export { debounce, deepClone, desensitizeEmail, desensitizeIdCard, desensitizeName, desensitizePhoneNumber, getBase64, getQueryParams, isEmail, isIdCard, isMobile, random, throttle };

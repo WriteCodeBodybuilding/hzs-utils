@@ -161,5 +161,13 @@ console.log(random(1, 10));
      * @returns 如果验证通过，返回true，否则返回false
      */
     export function isIdCard(value: string): boolean
+     /**
+     * 读取文件类型参数转换为 Base64 编码
+     * @param file 接受一个 File 类型参数。
+     * @returns 通过 Promise 异步处理文件读取和转换过程。 
+     * 成功时调用 resolve 并返回结果。
+     * 失败时调用 reject 并传递错误信息。
+     */
+    export function getBase64(file: File)
 
 ```

@@ -177,13 +177,22 @@ export function isEmail(value: string): boolean {
   return /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/.test(value)
 }
 
-export function isMobile(value:string): boolean {
+export function isMobile(value: string): boolean {
   return /^1([3589]\d|4[5-9]|6[1-2,4-7]|7[0-8])\d{8}$/.test(value)
 }
 
 
-export function isIdCard(value:string):boolean {
+export function isIdCard(value: string): boolean {
   return /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/.test(
-      value
+    value
   )
+}
+
+export function getBase64(file: File) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = error => reject(error);
+  });
 }
